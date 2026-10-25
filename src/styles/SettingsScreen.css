@@ -1,0 +1,890 @@
+.settings-screen {
+
+    --primary: #1976a3;
+    --primary-light: #dff4f8;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f3fafc,
+            #eef8fa,
+            #f8fbfc
+        );
+
+    font-family: Arial, sans-serif;
+
+    position: relative;
+
+    overflow-x: hidden;
+
+    color: #24343b;
+}
+
+
+/* ==========================================
+   MODO OSCURO
+========================================== */
+
+.settings-screen.dark-mode {
+
+    background:
+        linear-gradient(
+            135deg,
+            #17252b,
+            #1c3037,
+            #142126
+        );
+
+    color: #edf7fa;
+}
+
+
+/* ==========================================
+   DECORACIÓN
+========================================== */
+
+.settings-decoration {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+.gear,
+.medical-cross {
+
+    position: absolute;
+
+    color: #1976a3;
+
+    opacity: 0.035;
+
+    user-select: none;
+}
+
+.gear {
+
+    font-size: 150px;
+}
+
+.gear-one {
+
+    top: 12%;
+
+    left: -35px;
+
+    transform: rotate(20deg);
+}
+
+.gear-two {
+
+    top: 55%;
+
+    right: -45px;
+
+    font-size: 190px;
+
+    transform: rotate(-25deg);
+}
+
+.gear-three {
+
+    bottom: -40px;
+
+    left: 25%;
+
+    font-size: 120px;
+}
+
+.medical-cross {
+
+    font-size: 100px;
+}
+
+.cross-one {
+
+    top: 30%;
+
+    right: 20%;
+}
+
+.cross-two {
+
+    bottom: 15%;
+
+    left: 8%;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.settings-header {
+
+    height: 70px;
+
+    background-color: rgba(255, 255, 255, 0.95);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 20px;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.07);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+}
+
+.dark-mode .settings-header {
+
+    background-color: rgba(25, 39, 45, 0.97);
+}
+
+.settings-header h1 {
+
+    margin: 0;
+
+    font-size: 20px;
+
+    color: #24343b;
+}
+
+.dark-mode .settings-header h1 {
+
+    color: #edf7fa;
+}
+
+.settings-back,
+.account-header-button {
+
+    border: none;
+
+    background: none;
+
+    color: #1976a3;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    padding: 8px 4px;
+}
+
+
+/* ==========================================
+   CONTENIDO
+========================================== */
+
+.settings-content {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 24px 18px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* ==========================================
+   TARJETAS
+========================================== */
+
+.settings-card {
+
+    background-color: rgba(255, 255, 255, 0.93);
+
+    border: 1px solid rgba(25, 118, 163, 0.15);
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 7px 22px rgba(0, 0, 0, 0.06);
+}
+
+.dark-mode .settings-card {
+
+    background-color: rgba(32, 49, 56, 0.94);
+
+    border-color: rgba(138, 205, 221, 0.18);
+}
+
+.settings-card h2 {
+
+    margin: 0 0 12px;
+
+    font-size: 17px;
+
+    color: #24343b;
+}
+
+.dark-mode .settings-card h2 {
+
+    color: #edf7fa;
+}
+
+
+/* ==========================================
+   FILAS
+========================================== */
+
+.setting-row {
+
+    min-height: 70px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border-bottom: 1px solid #edf1f2;
+}
+
+.dark-mode .setting-row {
+
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.setting-row:last-child {
+
+    border-bottom: none;
+}
+
+.setting-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.setting-info strong {
+
+    font-size: 14px;
+
+    color: #24343b;
+}
+
+.dark-mode .setting-info strong {
+
+    color: #edf7fa;
+}
+
+.setting-info span {
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    color: #7a878c;
+
+    max-width: 420px;
+}
+
+
+/* ==========================================
+   IDIOMA
+========================================== */
+
+.language-select {
+
+    border: 1px solid #b7d9e2;
+
+    border-radius: 9px;
+
+    padding: 8px 10px;
+
+    background-color: white;
+
+    color: #24343b;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+.dark-mode .language-select {
+
+    background-color: #253a42;
+
+    color: #edf7fa;
+
+    border-color: #4b6871;
+}
+
+
+/* ==========================================
+   SWITCH
+========================================== */
+
+.switch {
+
+    position: relative;
+
+    display: inline-block;
+
+    width: 46px;
+
+    height: 25px;
+
+    flex-shrink: 0;
+}
+
+.switch input {
+
+    opacity: 0;
+
+    width: 0;
+
+    height: 0;
+}
+
+.slider {
+
+    position: absolute;
+
+    cursor: pointer;
+
+    inset: 0;
+
+    background-color: #c9d5d9;
+
+    border-radius: 30px;
+
+    transition: 0.2s;
+}
+
+.slider::before {
+
+    content: '';
+
+    position: absolute;
+
+    width: 19px;
+
+    height: 19px;
+
+    left: 3px;
+
+    top: 3px;
+
+    background-color: white;
+
+    border-radius: 50%;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.switch input:checked + .slider {
+
+    background-color: #1976a3;
+}
+
+.switch input:checked + .slider::before {
+
+    transform: translateX(21px);
+}
+
+
+/* ==========================================
+   OPCIONES
+========================================== */
+
+.settings-option {
+
+    width: 100%;
+
+    border: none;
+
+    border-bottom: 1px solid #edf1f2;
+
+    background: none;
+
+    padding: 17px 2px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: #24343b;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+.dark-mode .settings-option {
+
+    color: #edf7fa;
+
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.settings-option:last-child {
+
+    border-bottom: none;
+}
+
+.settings-option span:last-child {
+
+    color: #1976a3;
+
+    font-size: 20px;
+}
+
+
+/* ==========================================
+   CERRAR SESIÓN
+========================================== */
+
+.logout-button {
+
+    width: 100%;
+
+    border: 1px solid #e1a6a6;
+
+    border-radius: 14px;
+
+    background-color: #fff5f5;
+
+    color: #b52c2c;
+
+    padding: 14px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-bottom: 20px;
+}
+
+.logout-button:hover {
+
+    background-color: #ffeaea;
+}
+
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.settings-modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background-color: rgba(10, 30, 36, 0.55);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 100;
+}
+
+.settings-modal {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    background-color: white;
+
+    border-radius: 22px;
+
+    padding: 25px;
+
+    position: relative;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.2);
+
+    color: #24343b;
+}
+
+.modal-close {
+
+    position: absolute;
+
+    top: 12px;
+
+    right: 15px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 27px;
+
+    color: #7a878c;
+
+    cursor: pointer;
+}
+
+.settings-modal h2 {
+
+    margin-top: 0;
+
+    color: #1976a3;
+
+    font-size: 20px;
+}
+
+.settings-modal h3 {
+
+    color: #24343b;
+
+    font-size: 14px;
+
+    margin-top: 20px;
+}
+
+.settings-modal p {
+
+    color: #596b72;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   AYUDA
+========================================== */
+
+.help-steps {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin: 15px 0;
+}
+
+.help-steps div {
+
+    background-color: #f1fafc;
+
+    border-radius: 10px;
+
+    padding: 11px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.help-steps strong {
+
+    color: #1976a3;
+
+    margin-right: 7px;
+}
+
+
+/* ==========================================
+   TRIAGE
+========================================== */
+
+.triage-table {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.triage-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 11px 13px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+}
+
+.triage-row.rojo {
+
+    background-color: #fde4e4;
+
+    color: #a51f1f;
+}
+
+.triage-row.naranja {
+
+    background-color: #fff0dc;
+
+    color: #b85e00;
+}
+
+.triage-row.amarillo {
+
+    background-color: #fff8d9;
+
+    color: #756600;
+}
+
+.triage-row.verde {
+
+    background-color: #e4f5e5;
+
+    color: #2e7432;
+}
+
+.triage-row.azul {
+
+    background-color: #e2f2f8;
+
+    color: #125d7f;
+}
+
+
+/* ==========================================
+   FAQ
+========================================== */
+
+.faq-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1px;
+}
+
+.faq-list button {
+
+    width: 100%;
+
+    border: none;
+
+    border-bottom: 1px solid #edf1f2;
+
+    background-color: white;
+
+    padding: 15px 5px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    text-align: left;
+
+    font-size: 13px;
+
+    color: #24343b;
+
+    cursor: pointer;
+}
+
+.faq-list p {
+
+    margin: 0;
+
+    padding: 12px;
+
+    background-color: #f5fafb;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   CONTACTO
+========================================== */
+
+.contact-box {
+
+    background-color: #edf9fb;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    text-align: center;
+
+    color: #1976a3;
+
+    margin: 18px 0;
+}
+
+.email-button {
+
+    display: block;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    background-color: #1976a3;
+
+    color: white;
+
+    border-radius: 12px;
+
+    padding: 13px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   BOTÓN MODAL
+========================================== */
+
+.modal-close-button {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background-color: #1976a3;
+
+    color: white;
+
+    padding: 13px;
+
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   CELULAR
+========================================== */
+
+@media (max-width: 600px) {
+
+    .settings-header {
+
+        padding: 0 14px;
+    }
+
+    .settings-header h1 {
+
+        font-size: 18px;
+    }
+
+    .settings-content {
+
+        padding: 17px 12px;
+    }
+
+    .settings-card {
+
+        padding: 17px;
+
+        border-radius: 18px;
+    }
+
+    .setting-row {
+
+        min-height: 76px;
+    }
+
+    .setting-info span {
+
+        max-width: 240px;
+    }
+
+    .settings-modal-overlay {
+
+        padding: 12px;
+
+        align-items: flex-end;
+    }
+
+    .settings-modal {
+
+        max-height: 90vh;
+
+        border-radius: 22px 22px 0 0;
+
+        padding: 21px;
+    }
+            .settings-screen.dark-mode .settings-modal {
+            background: #1b2630;
+            color: #ffffff;
+        }
+
+        .settings-screen.dark-mode .settings-modal h2,
+        .settings-screen.dark-mode .settings-modal h3,
+        .settings-screen.dark-mode .settings-modal p,
+        .settings-screen.dark-mode .settings-modal li {
+            color: #ffffff;
+        }
+
+        .settings-screen.dark-mode .settings-modal button {
+            background: #263642;
+            color: #ffffff;
+            border-color: #3a4a55;
+}
+
+}

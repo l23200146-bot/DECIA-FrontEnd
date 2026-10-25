@@ -1,0 +1,748 @@
+* {
+    box-sizing: border-box;
+}
+
+.account-screen {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f4fbfd 0%, #eaf7fa 100%);
+    color: #17313b;
+    padding-bottom: 90px;
+    font-family: Arial, sans-serif;
+}
+
+.account-header {
+    height: 82px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #1976a3, #55c5d9);
+    color: white;
+}
+
+.account-back-button {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.account-header-title {
+    flex: 1;
+}
+
+.account-header-title h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.account-header-title p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.account-header-space {
+    width: 44px;
+}
+
+.account-content {
+    width: min(900px, 94%);
+    margin: 24px auto;
+}
+
+/* SOS */
+
+.sos-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.sos-button {
+    width: min(520px, 100%);
+    min-height: 145px;
+    border: none;
+    border-radius: 28px;
+    background: #d71920;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(215, 25, 32, 0.28);
+    animation: sosPulse 2.5s infinite;
+}
+
+.sos-icon {
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.sos-text {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 3px;
+}
+
+.sos-button small {
+    margin-top: 8px;
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+@keyframes sosPulse {
+    0% {
+        box-shadow: 0 10px 30px rgba(215, 25, 32, 0.25);
+    }
+
+    50% {
+        box-shadow: 0 10px 42px rgba(215, 25, 32, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 10px 30px rgba(215, 25, 32, 0.25);
+    }
+}
+
+/* Sections */
+
+.medical-card,
+.profiles-section,
+.emergency-contacts-section {
+    background: white;
+    border-radius: 22px;
+    padding: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 5px 18px rgba(24, 77, 91, 0.08);
+}
+
+.section-title h2,
+.section-heading h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.section-title p,
+.section-heading p {
+    margin: 5px 0 0;
+    color: #68818a;
+    font-size: 13px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.add-button {
+    border: none;
+    border-radius: 25px;
+    background: #1976a3;
+    color: white;
+    padding: 10px 17px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    opacity: 0.9;
+}
+
+/* Medical */
+
+.medical-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.medical-item {
+    padding: 15px;
+    border-radius: 14px;
+    background: #eef8fa;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.medical-item-wide {
+    grid-column: span 2;
+}
+
+.medical-item span {
+    color: #68818a;
+    font-size: 12px;
+}
+
+.medical-item strong {
+    color: #17313b;
+    font-size: 14px;
+}
+
+/* Profiles */
+
+.profiles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.profile-account-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px;
+    border: 2px solid transparent;
+    border-radius: 18px;
+    background: #f7fbfc;
+}
+
+.profile-account-card.selected {
+    border-color: #00bfa6;
+}
+
+.profile-avatar-button {
+    position: relative;
+    width: 76px;
+    height: 76px;
+    min-width: 76px;
+    border: none;
+    border-radius: 50%;
+    overflow: visible;
+    background: #55c5d9;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+}
+
+.profile-avatar-button img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-avatar-button > span:first-child {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.camera-badge {
+    position: absolute;
+    right: -6px;
+    bottom: -3px;
+    background: #1976a3;
+    color: white;
+    border-radius: 12px;
+    padding: 4px 6px;
+    font-size: 9px;
+}
+
+.profile-account-info {
+    flex: 1;
+}
+
+.profile-account-info h3 {
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.profile-account-info p {
+    margin: 3px 0;
+    color: #68818a;
+    font-size: 12px;
+}
+
+.select-profile-button,
+.edit-button {
+    margin-top: 8px;
+    border: none;
+    border-radius: 14px;
+    padding: 7px 11px;
+    cursor: pointer;
+}
+
+.select-profile-button {
+    background: #dff7f4;
+    color: #007e70;
+}
+
+.edit-button {
+    background: #eaf2f5;
+    color: #1976a3;
+}
+
+/* Contacts */
+
+.contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.emergency-contact-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px;
+    border-radius: 17px;
+    background: #f7fbfc;
+    border: 1px solid #d9e9ed;
+}
+
+.contact-avatar {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #55c5d9;
+    color: white;
+    font-weight: 700;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-name-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.contact-name-row h3 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.contact-info p {
+    margin: 3px 0;
+    color: #68818a;
+    font-size: 12px;
+}
+
+.primary-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    background: #fff0b8;
+    color: #805f00;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact-actions button {
+    border: none;
+    background: transparent;
+    color: #1976a3;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.contact-actions .delete-button {
+    color: #d71920;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 25px;
+    border-radius: 16px;
+    background: #f7fbfc;
+}
+
+.empty-state h3 {
+    margin: 0 0 8px;
+}
+
+.empty-state p {
+    color: #68818a;
+    font-size: 13px;
+}
+
+/* Bottom navigation */
+
+.account-bottom-nav {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: min(900px, 100%);
+    height: 70px;
+    background: white;
+    border-top: 1px solid #dbe8eb;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 20;
+}
+
+.account-bottom-nav button {
+    height: 100%;
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: #68818a;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.account-bottom-nav button.active {
+    color: #1976a3;
+    font-weight: 700;
+}
+
+/* Modals */
+
+.account-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.58);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.sos-modal,
+.account-form-modal {
+    position: relative;
+    width: min(500px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: white;
+    color: #17313b;
+    border-radius: 24px;
+    padding: 28px;
+}
+
+.sos-modal {
+    text-align: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: #edf3f5;
+    color: #17313b;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.sos-modal-icon {
+    width: 76px;
+    height: 76px;
+    margin: 5px auto 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d71920;
+    color: white;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.sos-modal h2 {
+    margin: 0 0 10px;
+}
+
+.sos-modal > p {
+    color: #68818a;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.quick-medical-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+    padding: 15px;
+    border-radius: 15px;
+    background: #eef8fa;
+    margin: 18px 0;
+    font-size: 12px;
+}
+
+.call-911-button,
+.sms-emergency-button,
+.cancel-sos-button {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    padding: 13px;
+    margin-top: 9px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.call-911-button {
+    background: #d71920;
+    color: white;
+}
+
+.sms-emergency-button {
+    background: #1976a3;
+    color: white;
+}
+
+.cancel-sos-button {
+    background: #edf3f5;
+    color: #17313b;
+}
+
+/* Forms */
+
+.account-form-modal h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.account-form-modal label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.account-form-modal input,
+.account-form-modal select,
+.account-form-modal textarea {
+    width: 100%;
+    border: 1px solid #cbdde2;
+    border-radius: 12px;
+    padding: 11px;
+    background: #f9fcfd;
+    color: #17313b;
+    font-family: inherit;
+}
+
+.account-form-modal textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.checkbox-label {
+    flex-direction: row !important;
+    align-items: center;
+    font-weight: 400 !important;
+}
+
+.checkbox-label input {
+    width: auto;
+}
+
+.save-form-button {
+    width: 100%;
+    border: none;
+    border-radius: 14px;
+    padding: 13px;
+    background: #1976a3;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.hidden-file-input {
+    display: none;
+}
+
+/* DARK MODE */
+
+.account-screen.dark-mode {
+    background: linear-gradient(180deg, #101820 0%, #0b1218 100%);
+    color: #f1f5f9;
+}
+
+.account-screen.dark-mode .medical-card,
+.account-screen.dark-mode .profiles-section,
+.account-screen.dark-mode .emergency-contacts-section {
+    background: #1b2630;
+    color: #f1f5f9;
+}
+
+.account-screen.dark-mode .section-title p,
+.account-screen.dark-mode .section-heading p,
+.account-screen.dark-mode .profile-account-info p,
+.account-screen.dark-mode .contact-info p,
+.account-screen.dark-mode .empty-state p {
+    color: #a9bac2;
+}
+
+.account-screen.dark-mode .medical-item {
+    background: #18232c;
+}
+
+.account-screen.dark-mode .medical-item span {
+    color: #a9bac2;
+}
+
+.account-screen.dark-mode .medical-item strong {
+    color: #ffffff;
+}
+
+.account-screen.dark-mode .profile-account-card,
+.account-screen.dark-mode .emergency-contact-card,
+.account-screen.dark-mode .empty-state {
+    background: #18232c;
+    border-color: #344650;
+}
+
+.account-screen.dark-mode .profile-account-card.selected {
+    border-color: #00bfa6;
+}
+
+.account-screen.dark-mode .select-profile-button {
+    background: #163b3a;
+    color: #67e8d5;
+}
+
+.account-screen.dark-mode .edit-button {
+    background: #263842;
+    color: #7ed9eb;
+}
+
+.account-screen.dark-mode .account-bottom-nav {
+    background: #151f27;
+    border-color: #344650;
+}
+
+.account-screen.dark-mode .account-bottom-nav button {
+    color: #a9bac2;
+}
+
+.account-screen.dark-mode .account-bottom-nav button.active {
+    color: #7ed9eb;
+}
+
+.account-screen.dark-mode .sos-modal,
+.account-screen.dark-mode .account-form-modal {
+    background: #1b2630;
+    color: #ffffff;
+}
+
+.account-screen.dark-mode .modal-close {
+    background: #263842;
+    color: #ffffff;
+}
+
+.account-screen.dark-mode .sos-modal > p {
+    color: #a9bac2;
+}
+
+.account-screen.dark-mode .quick-medical-info {
+    background: #18232c;
+}
+
+.account-screen.dark-mode .cancel-sos-button {
+    background: #263842;
+    color: #ffffff;
+}
+
+.account-screen.dark-mode .account-form-modal input,
+.account-screen.dark-mode .account-form-modal select,
+.account-screen.dark-mode .account-form-modal textarea {
+    background: #18232c;
+    color: #ffffff;
+    border-color: #40545f;
+}
+
+.account-screen.dark-mode .account-form-modal input::placeholder,
+.account-screen.dark-mode .account-form-modal textarea::placeholder {
+    color: #8fa3ad;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    .account-header {
+        height: 74px;
+        padding: 10px 15px;
+    }
+
+    .account-header-title h1 {
+        font-size: 20px;
+    }
+
+    .account-content {
+        width: 94%;
+        margin-top: 18px;
+    }
+
+    .medical-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .medical-item-wide {
+        grid-column: span 1;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+
+    .profile-account-card {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .profile-account-info {
+        min-width: calc(100% - 95px);
+    }
+
+    .edit-button {
+        margin-left: 91px;
+    }
+
+    .emergency-contact-card {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .contact-actions {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .account-bottom-nav {
+        height: 64px;
+    }
+
+    .sos-button {
+        min-height: 130px;
+    }
+
+    .sos-icon {
+        font-size: 36px;
+    }
+}
